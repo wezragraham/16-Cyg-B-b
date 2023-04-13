@@ -33,34 +33,34 @@ public class PlayerController : MonoBehaviour
         //forward
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(this.transform.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         //backward
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(-transform.right * speed * Time.deltaTime);
+            transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }
         //left
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(transform.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
         //right
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(-transform.forward * speed * Time.deltaTime);
+            transform.Translate(-Vector3.right * speed * Time.deltaTime);
         }
 
 
         //yaw
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.up * speed *Time.deltaTime);
+            transform.Rotate(transform.up * speed *Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(-Vector3.up * speed *Time.deltaTime);
+            transform.Rotate(-transform.up * speed *Time.deltaTime);
         }
 
         //roll

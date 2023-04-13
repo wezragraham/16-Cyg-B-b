@@ -23,10 +23,10 @@ public class EnemyController : MonoBehaviour
     {
         transform.LookAt(player.transform.position);
 
-
-        if (player.GetComponent<PlayerController>().isMoving  == true)
+        if (player.GetComponent<PlayerController>().isMoving)
         {
             transform.Translate(transform.forward * speed * Time.deltaTime);
         }
+
     }
 }
